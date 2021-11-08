@@ -5,9 +5,14 @@ const app = {
             results: false
         }
     },
+    methods: {
+        async search() {
+            const result = await axios.get(`https://swapi.dev/api/people/?search=${this.name}&format=json`)
+            this.results = result.data
+        }
+    },
     async mounted() {
-        const result = await axios.get('https://swapi.dev/api/people/?search=Luke&format=json')
-        this.results = result.data
+        await this.search();
     }
 }
 
