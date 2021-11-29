@@ -13,10 +13,6 @@ const app = {
             this.results = result.data
         }
     },
-    async mounted() {
-        // const result = await axios.get('https://swapi.dev/api/people/?search=Boba&format=json')
-        // this.results = result.data
-    }
 }
 
 Vue.createApp(app).mount('.foo')
