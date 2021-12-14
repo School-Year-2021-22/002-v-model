@@ -1,7 +1,7 @@
 const app = {
     data() {
         return {
-            name: 'Luke',
+            name: '',
             results: false
         }
     },
@@ -9,7 +9,7 @@ const app = {
         async search() {
             //
             console.log(this.name)
-            const result = await axios.get('https://pokeapi.co/api/v2/pokemon/'+this.name)
+            const result = await axios.get(''+this.name)
             this.results = result.data
         }
     },
